@@ -1,7 +1,685 @@
 <!DOCTYPE html>
 <html>
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+   <meta charset="utf-8">
+   <title>NeverGoBack</title>
+   <meta name="image" content="hemes/damned/assets/images/avicon85108510.html">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="og:image" content="themes/nevergoback/assets/images/promo.html">
+   <meta property="og:image:type" content="image/png">
+   <meta property="og:image:width" content="1024">
+   <meta property="og:image:height" content="576">
+   <meta property="og:type" content="website">
+   <link rel="icon" type="image/x-icon" href="themes/nevergoback/assets/images/NGB-LOGO.ico">
+   <link href="themes/nevergoback/assets/css/style.min5d245d245d245d24.css?v=1063455755" rel="stylesheet">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-176564639-1"></script>
+   <style>
+      body {
+         opacity: 0;
+         transition: opacity 1s ease-in-out;
+         background: linear-gradient(135deg, #0f0c29, #1a4aab, #24243e);
+         color: #fff;
+      }
+
+      body.loaded {
+         opacity: 1;
+      }
+
+      .section-title {
+         font-size: 3em;
+         margin: 20px 0;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+         background: linear-gradient(45deg, #fff, #0d52c1);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+      .btn-primary {
+         background: linear-gradient(45deg, #1858b7, #1f469f);
+         border: none;
+         padding: 15px 30px;
+         border-radius: 25px;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         font-weight: bold;
+         text-transform: uppercase;
+         letter-spacing: 1px;
+      }
+
+      .btn-primary:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .bulle {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .bulle:hover {
+         transform: scale(1.1);
+         box-shadow: 0 0 25px 8px #001f3f;
+      }
+
+      .validated-box,
+      .in-progress-box {
+         backdrop-filter: blur(5px);
+         transition: transform 0.3s ease;
+         margin: 15px;
+         padding: 25px;
+      }
+
+      .validated-box:hover,
+      .in-progress-box:hover {
+         transform: translateY(-5px);
+      }
+
+      table {
+         background: rgba(255, 255, 255, 0.05);
+         backdrop-filter: blur(5px);
+         border-radius: 15px;
+         overflow: hidden;
+         transition: transform 0.3s ease;
+      }
+
+      th {
+         padding: 15px;
+         background: rgba(255, 255, 255, 0.1);
+      }
+
+      .parallax-banner img {
+         transition: transform 0.3s ease;
+      }
+
+      .main-menu a {
+         position: relative;
+         overflow: hidden;
+         padding: 5px 0;
+      }
+
+      .main-menu a::after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 0;
+         height: 2px;
+         background: #165ebc;
+         transition: width 0.3s ease;
+      }
+
+      .main-menu a:hover::after {
+         width: 100%;
+      }
+
+      footer {
+         background: rgba(0, 0, 0, 0.3);
+         padding: 20px;
+         margin-top: 50px;
+         backdrop-filter: blur(5px);
+      }
+   </style>
+   <script>
+      window.addEventListener('load', () => {
+         document.body.classList.add('loaded');
+         AOS.init({
+            duration: 1000,
+            once: true
+         });
+      });
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+         dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-176564639-1');
+   </script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+   <header id="layout-header">
+      <section class="header container-fluid" id="header" data-aos="fade-down">
+         <div class="main-menu-wrapper row align-items-center justify-content-between">
+            <div class="col d-xl-none">
+               <button class="btn-menu btn-open-modal" data-target="#modal-menu">
+                  <i class="icon-menu"></i>
+               </button>
+            </div>
+            <div class="col d-none d-xl-flex">
+               <p class="bold mb-0">© 2025 NeverGoBack </p>
+            </div>
+            <nav class="col-auto d-none d-xl-flex">
+               <ul class="main-menu menu row text-uppercase font-regular font-16">
+                  <li class="col-auto menu-home">
+                     <a class="scroll-to" href="#header" target="">
+                        Accueil
+                     </a>
+                  </li>
+                  <li class="col-auto">
+                     <a class="scroll-to" href="#game" target="">
+                        Notre projet
+                     </a>
+                  </li>
+                  <li class="col-auto menu-features">
+                     <a class="scroll-to" href="#features" target="">
+                        Ressources
+                     </a>
+                  </li>
+                  <li class="col-auto menu-screenshots">
+                     <a class="scroll-to" href="#screenshots" target="">
+                        Téléchargements
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="col locale-wrapper">
+               <i class="icon-language d-none"></i>
+               <form method="POST" action="#" accept-charset="UTF-8">
+                  <input name="_session_key" type="hidden" value="aKfSDvxezRu5C2C2nsrcpg8TziOxcsTbPuELkKYp"><input
+                     name="_token" type="hidden" value="2RubDs5aKHNIGljpSi7YxsL5Puy4rPfVELmag5JY">
+                  <select name="locale" data-request="onSwitchLocale"
+                     class="form-control custom-select select-locale d-none">
+                     <option value="en-us" selected>EN-US</option>
+                  </select>
+               </form>
+            </div>
+         </div>
+      </section>
+      <section class="header fixed-header container-fluid">
+         <img class="logo" src="themes/nevergoback/assets/images/NGB-LOGO.png" alt="damned-logo" data-aos="zoom-in">
+         <div class="main-menu-wrapper row align-items-center justify-content-between">
+            <div class="col d-xl-none">
+               <button class="btn-menu btn-open-modal" data-target="#modal-menu">
+                  <i class="icon-menu"></i>
+               </button>
+            </div>
+            <div class="col d-none d-xl-flex">
+               <p class="bold mb-0">© 2025 NeverGoBack.</p>
+            </div>
+            <nav class="col-auto d-none d-xl-flex">
+               <ul class="main-menu menu row text-uppercase font-regular font-16">
+                  <li class="col-auto menu-home">
+                     <a class="scroll-to" href="#header" target="">
+                        Accueil
+                     </a>
+                  </li>
+                  <li class="col-auto">
+                     <a class="scroll-to" href="#game" target="">
+                        Notre projet
+                     </a>
+                  </li>
+                  <li class="col-auto">
+                     <a class="scroll-to" href="#features" target="">
+                        Ressources
+                     </a>
+                  </li>
+                  <li class="col-auto">
+                     <a class="scroll-to" href="#screenshots" target="">
+                        Téléchargements
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+            <div class="col locale-wrapper">
+               <i class="icon-language d-none"></i>
+               <form method="POST" action="#" accept-charset="UTF-8">
+                  <input name="_session_key" type="hidden" value="aKfSDvxezRu5C2C2nsrcpg8TziOxcsTbPuELkKYp"><input
+                     name="_token" type="hidden" value="2RubDs5aKHNIGljpSi7YxsL5Puy4rPfVELmag5JY">
+                  <select name="locale" data-request="onSwitchLocale"
+                     class="form-control custom-select select-locale d-none">
+                     <option value="en-us" selected>EN-US</option>
+                     <option value="pt-br">PT-BR</option>
+                  </select>
+               </form>
+            </div>
+         </div>
+         <img class="orn-bar d-none d-lg-block" src="themes/nevergoback/assets/images/orns/orn-fixed-bar.svg"
+            alt="damned-ornament">
+         <img class="orn-bar d-lg-none" src="themes/nevergoback/assets/images/orns/m-orn-fixed-bar.svg"
+            alt="damned-ornament">
+      </section>
+      <div class="modal-overlay modal-menu" id="modal-menu">
+         <div class="pop-up-content text-center">
+            <button class="btn-close-modal"><i class="icon-close"></i></button>
+            <div class="content-section">
+               <div class="row orn-bar">
+                  <div class="col-12 text-center color-white p-0">
+                     <img src="themes/nevergoback/assets/images/orns/orn-section.svg" alt="logo-ornament">
+                     <h1 class="section-title text-uppercase">Menu</h1>
+                  </div>
+               </div>
+            </div>
+            <ul class="modal-menu-wrapper">
+               <li class="col-auto menu-home">
+                  <a class="scroll-to btn-close-modal" href="#header" target="">
+                     Accueil
+                  </a>
+               </li>
+               <li class="col-auto">
+                  <a class="scroll-to btn-close-modal" href="#game" target="">
+                     Notre projet
+                  </a>
+               </li>
+               <li class="col-auto menu-features">
+                  <a class="scroll-to btn-close-modal" href="#features" target="">
+                     Ressources
+                  </a>
+               </li>
+               <li class="col-auto menu-screenshots">
+                  <a class="scroll-to btn-close-modal" href="#screenshots" target="">
+                     Téléchargements
+                  </a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </header>
+   <main>
+      <div class="parallax-banner">
+         <img class="mw-100" src="themes/nevergoback/assets/images/parallax-banner/bg-deep-blue.png"
+            alt="img-banner-damned" data-aos="fade">
+         <img class="mw-100 rellax" data-rellax-speed="-7"
+            src="themes/nevergoback/assets/images/parallax-banner/jeu_site.png" alt="img-banner-damned"
+            data-aos="fade-up" data-aos-delay="200">
+         <img class="mw-100 rellax banner-logo" data-rellax-speed="-13"
+            src="themes/nevergoback/assets/images/NGB-LOGO.png" alt="logo-damned" data-aos="zoom-in"
+            data-aos-delay="400">
+
+         <div class="banner-content text-center">
+            <a class="scroll-to continue-link mb-0 text-uppercase font-12" data-scrollto="#game" data-aos="fade-up"
+               data-aos-delay="600">
+               Continuer <br>
+               <i class="icon-arrow-down font-22"></i>
+            </a>
+         </div>
+      </div>
+      <section class="content-section highlight-section container-fluid" id="game">
+         <div class="row orn-bar" data-aos="fade-up">
+            <div class="col-12 text-center color-white p-0">
+               <p class="section-number font-regular">1</p>
+               <span class="section-dot"></span>
+               <img src="themes/nevergoback/assets/images/orns/orn-section.svg" alt="logo-ornament">
+               <h1 class="section-title text-uppercase">Notre projet</h1>
+               <span class="section-line"></span>
+            </div>
+         </div>
+         <br>
+         <p style="padding-left: 200px; padding-right: 200px; text-align: justify; line-height: 1.8; font-size: 1.1em;"
+            data-aos="fade-up" data-aos-delay="200">
+            Le but principal de l'équipe Kawok enjoyers peut être résumé en une phrase : "Innover et progresser en
+            s'amusant".
+            Nous innoverons en créant un jeu original ne copiant pas les jeux dominant le marché aujourd'hui.
+            Malgré le fait que ce type de jeu "Death run" existe déjà, nous allons développer le concept dans un jeu
+            novateur
+            qui en repoussera les limites. En effet, nous mêlerons le Death run à des fonctionnalités exclusives.
+         </p>
+         <br>
+         <style>
+            .team-container {
+               display: flex;
+               justify-content: center;
+               flex-wrap: wrap;
+               gap: 40px;
+               padding: 20px;
+               max-width: 1200px;
+               margin: 0 auto;
+            }
+
+            .team-member {
+               text-align: center;
+               flex: 0 1 200px;
+               margin: 10px;
+            }
+
+            .bulle {
+               width: 150px;
+               height: 150px;
+               border-radius: 50%;
+               overflow: hidden;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border: 2px solid #0b37ba;
+               box-shadow: 0 0 15px 5px #001f3f;
+               margin: 0 auto 15px;
+               transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .bulle img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+
+            .team-member p {
+               margin-top: 10px;
+               font-size: 1.1em;
+               color: white;
+            }
+         </style>
+         <div class="team-container" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="600">
+               <div class="bulle">
+                  <img src="storage/app/media/alex.jpg" alt="Alexandre Pern">
+               </div>
+               <p class="color-white font-regular">Alexandre Pern</p>
+            </div>
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="700">
+               <div class="bulle">
+                  <img src="storage/app/media/eliot.jpg" alt="Eliot Soumeillan">
+               </div>
+               <p class="color-white font-regular">Eliot Soumeillan</p>
+            </div>
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="800">
+               <div class="bulle">
+                  <img src="storage/app/media/peraldi.jpg" alt="Alexandre Peraldi">
+               </div>
+               <p class="color-white font-regular">Alexandre Peraldi</p>
+            </div>
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="900">
+               <div class="bulle">
+                  <img src="storage/app/media/cedric.jpg" alt="Cédric Tailheuret">
+               </div>
+               <p class="color-white font-regular">Cédric Tailheuret</p>
+            </div>
+            <div class="team-member" data-aos="zoom-in" data-aos-delay="1000">
+               <div class="bulle">
+                  <img src="storage/app/media/ioen.jpg" alt="Ioën Moliard">
+               </div>
+               <p class="color-white font-regular">Ioën Moliard</p>
+            </div>
+         </div>
+
+         <br>
+         <br>
+         <div class="row">
+            <div class="list-features container">
+               <div class="row">
+                  <div class="col-12">
+                     <h2 class="color-white font-40 font-regular mb-30 text-center">Avancement du projet</h2>
+                  </div>
+               </div>
+               <style>
+                  .validated-box {
+                     background-color: rgba(0, 128, 0, 0.1);
+                     /* Vert translucide */
+                     border: 2px solid rgba(0, 128, 0, 0.5);
+                     /* Bordure verte translucide */
+                     border-radius: 10px;
+                     /* Coins arrondis */
+                  }
+
+                  .in-progress-box {
+                     background-color: rgba(255, 165, 0, 0.1);
+                     /* Orange translucide */
+                     border: 2px solid rgba(255, 165, 0, 0.5);
+                     /* Bordure orange translucide */
+                     border-radius: 10px;
+                     /* Coins arrondis */
+                  }
+
+                  /* Ajout d'un espacement interne et marges */
+                  .text-box {
+                     font-size: 16px;
+                     line-height: 1.5;
+                  }
+               </style>
+               <div class="row">
+                  <!-- Encadré gauche : validés avec ✅ -->
+                  <div class="col-12 col-lg-6 mb-4">
+                     <div class="validated-box d-flex flex-column justify-content-center align-items-center p-4">
+                        <h4 class="mb-3 text-center">Validé ✅</h4>
+                        <div class="text-box">
+                           <p><strong>• Prise en main du moteur</strong></p>
+                           <p><strong>• Mouvement du joueur (avancer, sauter)</strong></p>
+                           <p><strong>• Première personne</strong></p>
+                           <p><strong>• Item dans la main (décoratif)</strong></p>
+                           <p><strong>• Apparence / Animation du personnage</strong></p>
+                           <p><strong>• Multijoueur</strong></p>
+                           <p><strong>• Système de room</strong></p>
+                           <p><strong>• Synchronisation des animations</strong></p>
+                           <p><strong>• Menu et paramètres réglables</strong></p>
+                           <p><strong>• Nametag</strong></p>
+                           <p><strong>• Changement d'apparence</strong></p>
+                           <p><strong>• Box du spawn qui disparait</strong></p>
+                           <p><strong>• Musique du menu d'accueil</strong></p>
+                           <p><strong>• Classement de fin de partie</strong></p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Encadré droite : en cours avec ⌛ -->
+                  <div class="col-12 col-lg-6 mb-4">
+                     <div class="in-progress-box p-4 d-flex flex-column justify-content-center align-items-center p-4">
+                        <h4 class="mb-3 text-center">En cours ⌛</h4>
+                        <div class="text-box">
+                           <p><strong>• IA</strong> : Nous sommes en train d'ajouter une IA qui génère un parcours en
+                              fonction du niveau du joueur.</p>
+                           <p><strong>• Ajout de bras à la POV du joueur</strong> : Nous sommes en train d'implémenter
+                              cet ajout.</p>
+                           <p><strong>• Conception des maps</strong> : Nous sommes en train de finaliser les maps.</p>
+                           <p><strong>• Modules de parcours</strong> : Nous avons créé différents modules de parcours,
+                              d'autres sont à venir.</p>
+                           <p><strong>• Mode spectateur</strong> : Nous allons synchroniser la caméra spectateur avec le
+                              joueur.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <br>
+         <br>
+         <div style="text-align: center;">
+            <table border="1" style="margin: 0 auto;border-width: 4px;table-layout: fixed;width: 50%;">
+               <tr>
+                  <th style="border-width: 2px;">Problèmes rencontrés ❌</th>
+                  <th style="border-width: 2px;">Solutions apportés 👍</th>
+               </tr>
+               <tr>
+                  <th style="border-width: 2px;">Partage du projet à jour entre les membres (avec Version
+                     Control) </td>
+                  <th style="border-width: 2px;"> Migration vers Github en utilisant Github Desktop pour
+                     clone / push le
+                     projet</td>
+               </tr>
+               <tr>
+                  <th style="border-width: 2px;">Déplacement peu fluide en utilisant l'ancien Input System
+                     </td>
+                  <th style="border-width: 2px;"> Utilisation du New Input System</td>
+               </tr>
+               <tr>
+                  <th style="border-width: 2px;">Mouvement de caméra saccadé </td>
+                  <th style="border-width: 2px;"> Implémentation du plugin CineMachine pour une caméra
+                     principale fluide
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Sensibilité de souris qui varie en fonction de l'amplitude
+                     du mouvement
+                     de caméra avec le New Input System</td>
+                  <th style="border-width: 2px;"> Utilisation de Input.GetAxis pour les mouvements de caméra
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Le joueur tombe en sautant sur une plateforme en mouvement</td>
+                  <th style="border-width: 2px;"> Mise du joueur en tant que child de la plateforme pour qu'il soit fixé
+                     dessus
+                     </td>
+               </tr>
+               <tr>
+                  <th style="border-width: 2px;">Mauvaise échelle en important une map de Blender sur Unity</td>
+                  <th style="border-width: 2px;"> Utilisation de l'objet Terrain sur Unity
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Problème de gravité sur les OS basés sur Linux</td>
+                  <th style="border-width: 2px;"> Retrait du component rigidbody
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Bug de gravité des autres joueurs</td>
+                  <th style="border-width: 2px;"> Retrait du component rigidbody
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Controle de l'autre joueur avec le multi</td>
+                  <th style="border-width: 2px;"> Désactivation de la caméra et activation au runtime
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Probleme d'axe en fonction du parent</td>
+                  <th style="border-width: 2px;"> Tout faire avec le même parent pour ne pas avoir de problèmes de
+                     dimensions et d'axes
+                     </td>
+               </tr>
+
+               <tr>
+                  <th style="border-width: 2px;">Map trop sombre</td>
+                  <th style="border-width: 2px;"> Utilisation d'un object lightprobe pour afficher les reflets
+                     </td>
+               </tr>
+
+
+
+
+
+
+            </table>
+         </div>
+
+
+         <br><br>
+
+
+      </section>
+      <section class="content-section features-section container-fluid" id="features">
+         <div class="row orn-bar" data-aos="fade-up">
+            <div class="col-12 text-center color-white p-0">
+               <p class="section-number font-regular">11</p>
+               <span class="section-dot"></span>
+               <img src="themes/nevergoback/assets/images/orns/orn-section.svg" alt="logo-ornament">
+               <h1 class="section-title text-uppercase">Ressources</h1>
+               <span class="section-line"></span>
+            </div>
+         </div>
+         <br>
+         <br>
+         <br>
+         <div class="row">
+            <ul class="list-features container">
+               <li class="row d-flex justify-content-center align-items-center" data-aos="fade-right">
+                  <div class="col-8 col-lg-3 d-flex justify-content-center align-items-center">
+                     <div class="orn-box img-wrapper">
+                        <img class="w-100" src="storage/app/media/unity.png" alt="Unity logo">
+                     </div>
+                  </div>
+                  <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center text-center">
+                     <div class="text-box">
+                        <h2 class="color-white font-40 font-regular mb-30">Unity 3D</h2>
+                        <p>
+                           Nous avons choisi Unity 3D pour notre projet de jeu vidéo car il offre des outils puissants
+                           pour créer des environnements immersifs et gérer des assets 3D de manière efficace. Grâce à
+                           ses nombreuses fonctionnalités, nous pouvons donner vie à des mécaniques de gameplay
+                           dynamiques et à des effets visuels impressionnants.
+                        </p>
+                     </div>
+                  </div>
+               </li>
+
+               <li class="row d-flex justify-content-center align-items-center" data-aos="fade-left">
+                  <div class="col-8 col-lg-3 d-flex justify-content-center align-items-center">
+                     <div class="orn-box img-wrapper">
+                        <img class="w-100" src="storage/app/media/github.png" alt="">
+                     </div>
+                  </div>
+                  <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center text-center">
+                     <div class="text-box">
+                        <h2 class="color-white font-40 font-regular mb-30">Github / Github Desktop</h2>
+                        <p>
+                           Nous avons choisi GitHub pour partager et collaborer sur notre projet, car
+                           ils nous permettent de travailler efficacement en équipe. Grâce à cet outil, nous pouvons
+                           gérer facilement les versions du code et suivre les modifications de chacun.
+                        </p>
+                     </div>
+                  </div>
+               </li>
+               <li class="row d-flex justify-content-center align-items-center" data-aos="fade-right">
+                  <div class="col-8 col-lg-3 d-flex justify-content-center align-items-center">
+                     <div class="orn-box img-wrapper">
+                        <img style="width: 90% !important" src="storage/app/media/blender.png" alt="">
+                     </div>
+                  </div>
+                  <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center text-center">
+                     <div class="text-box">
+                        <h2 class="color-white font-40 font-regular mb-30">Blender</h2>
+                        <p>Nous avons utilisé Blender pour créer les maps de notre jeu, car c'est un outil puissant pour
+                           concevoir des environnements en 3D avec précision et détail.
+                        </p>
+                     </div>
+                  </div>
+               </li>
+               <li class="row d-flex justify-content-center align-items-center" data-aos="fade-left">
+                  <div class="col-8 col-lg-3 d-flex justify-content-center align-items-center">
+                     <div class="orn-box img-wrapper">
+                        <img class="w-100" src="storage/app/media/photon.png" alt="">
+                     </div>
+                  </div>
+                  <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center text-center">
+                     <div class="text-box">
+                        <h2 class="color-white font-40 font-regular mb-30">Photon / Photon Engine</h2>
+                        <p>
+                           Nous avons utilisé Photon pour mettre en place le multijoueur de notre jeu,
+                           car il offre une solution fiable et performante pour synchroniser les joueurs en temps réel.
+                        </p>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+      </section>
+      <section class="content-section screenshots-section container-fluid" id="screenshots">
+         <div class="row orn-bar" data-aos="fade-up">
+            <div class="col-12 text-center color-white p-0">
+               <p class="section-number font-regular">111</p>
+               <span class="section-dot"></span>
+               <img src="themes/nevergoback/assets/images/orns/orn-section.svg" alt="logo-ornament">
+               <h1 class="section-title text-uppercase">Téléchargements</h1>
+               <span class="section-line"></span>
+            </div>
+         </div>
+         <div class="banner-content text-center" data-aos="zoom-in">
+            <div class="d-flex justify-content-center mb-20">
+               <a class="btn btn-primary" href="rapport.pdf">
+                  Rapport
+               </a>
+            </div>
+         </div>
+      </section>
+
+   </main>
+   <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+   <script src="themes/nevergoback/assets/js/main.min.js"></script>
+   <script src="modules/system/assets/js/framework.js"></script>
+   <script src="modules/system/assets/js/framework.extras.js"></script>
+   <link rel="stylesheet" property="stylesheet" href="modules/system/assets/css/framework.extras.css">
 </body>
+
+<footer>
+   <div style="text-align: center;" data-aos="fade-up">
+      © 2024-2025 NeverGoBack, tous droits réservés
+   </div>
+</footer>
+
 </html>
